@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 4fr;
     align-items: center;
     padding: 1em 0 1em 0;
+    margin-bottom: 0.5em;
     .logo_container {
         img {
             width: auto;
@@ -21,7 +22,7 @@
         }
         a {
             text-decoration: none;
-            margin-left: 2em;
+            margin-left: 2.5em;
             font-size: 1.3rem;
             color: variable.$Very_dark_blue;
 
