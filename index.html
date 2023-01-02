@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid</title>
+    <title>News Homepage</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -26,21 +26,24 @@
       <div class="top_container">
         <div class="row">
           <div class="left">
-            <img
-              src="./assets/images/image-web-3-desktop.jpg"
-              alt=""
-              class="desktop"
-            />
-            <img
-              src="./assets/images/image-web-3-mobile.jpg"
-              alt=""
-              class="mobile"
-            />
+            <div class="imgHolder">
+              <img
+                src="./assets/images/image-web-3-mobile.jpg"
+                alt="mobile"
+                class="mobile"
+              />
+              <img
+                src="./assets/images/image-web-3-desktop.jpg"
+                alt=""
+                class="desktop"
+              />
+            </div>
+
             <div class="down">
               <div class="down_left">
-                <h1>THE BRIGHT</h1>
-                <h1>FUTURE OF</h1>
-                <h1>WEB 3.0?</h1>
+                <h1>The Bright</h1>
+                <h1>Future of Web</h1>
+                <h1>3.0?</h1>
               </div>
               <div class="down_right">
                 <p>
@@ -70,7 +73,7 @@
             <div class="text">
               <h4>Is VC Funding Drying Up?</h4>
               <p>
-                Private funding by VC firms is down 50% YOY. WE take a look t
+                Private funding by VC firms is down 50% YOY. WE take a look at
                 what that means.
               </p>
               <hr />
@@ -105,5 +108,28 @@
         </div>
       </div>
     </section>
+
+    <!-- sidebar -->
+    <img src="./assets/images/icon-menu.svg" alt="" class="toggle_img" />
+    <div class="sidebar active">
+      <nav class="sidebar-menu">
+        <div class="logo_container">
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="logo"
+            class="close-button"
+          />
+        </div>
+        <ul class="nav_list">
+          <li class="nav_item"><a href="">Home</a></li>
+          <li class="nav_item"><a href="">New</a></li>
+          <li class="nav_item"><a href="">Popular</a></li>
+          <li class="nav_item"><a href="">Trending</a></li>
+          <li class="nav_item"><a href="">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- javascript -->
+    <script src="./toggle.js"></script>
   </body>
 </html>

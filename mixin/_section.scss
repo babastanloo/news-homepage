@@ -1,0 +1,142 @@
+@use "../variable";
+@mixin section {
+section {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    .top_container {
+        width: 100%;
+        .row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-column-gap: 2em;
+
+            .left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+             @media only screen and (min-width: 600px){
+            .imgHolder {
+                .desktop {
+                    width: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+        
+                .mobile {
+                    width: 100%;
+                    object-fit: cover;
+                    display: none;
+                }
+            }
+        }
+            
+
+        .down {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin: 0;
+            .down_left {
+                padding: 1em 1em 1em 0;
+                display: flex;
+                flex-direction: column;
+                h1 {
+                    color: variable.$Very_dark_blue;
+                    font-size: 3rem;
+                    font-weight: 800;
+                }
+            }
+
+            .down_right {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 1em;
+                p {
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                    line-height: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+                button {
+                    background: variable.$Very_dark_blue;
+                    color: variable.$Grayish_blue;
+                    font-size: 1em;
+                    font-weight: 400;
+                    padding: 1em;
+                    border: none;
+                    width: 50%;
+                    margin-top: 2rem;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        background: variable.$Soft_red;
+                        border: none;
+                        color: variable.$Off_white;
+                    }
+                }
+            }
+        }
+    }
+// card
+    .right {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-direction: column;
+        background: variable.$Very_dark_blue;
+        color: variable.$Grayish_blue;
+        padding: 1rem;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: variable.$Soft_orange;
+        }
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2rem;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        .imgHolder {
+            .desktop {
+                width: 100%;
+                object-fit: cover;
+                display: none;
+            }
+    
+            .mobile {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+            }
+            }
+        .down_left {
+            padding: 1em 1em 2em 0.5em;
+        }
+        .down_right {
+            padding: 1em 1em 2em 0.5em;
+        }
+
+    }
+}
+}
+
+}
+}

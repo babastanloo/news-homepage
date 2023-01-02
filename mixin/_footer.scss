@@ -1,0 +1,41 @@
+@use "../variable";
+
+@mixin footer{
+.container2 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-rows: 1fr;
+align-items: center;
+margin-top: 1rem;
+
+.row2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    margin-right: 2.5rem;
+    padding: 1em 1em 2em 0.5em;
+    img {
+        width: 100%;
+        height: 100%;
+        padding-right: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: start;
+        color: variable.$Grayish_blue;
+    }
+    h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: variable.$Dark_grayish_blue;
+    }
+}
+}
+}

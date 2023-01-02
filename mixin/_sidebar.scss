@@ -1,0 +1,59 @@
+ @use "../variable";
+
+ @mixin sidebar {
+    @media screen and (max-width: 600px) {
+            .toggle_img {
+                display: block;
+                position: absolute;
+                top: 2.2rem;
+                right: 0.2rem;
+                width: 10%;
+                cursor: pointer;
+            }
+    
+            .sidebar {
+                background-color: variable.$Off_white;
+                color: variable.$Very_dark_blue;
+                height: 100vh;
+                width: 70%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                overflow-x: hidden;
+                display: block;
+                transition: .2s ease-in-out;
+    
+                .close-button {
+                    position: absolute;
+                    top: 2em;
+                    right: 1.5em;
+                }
+    
+                ul {
+                    margin-top: 9em;
+    
+                    li {
+                        display: block;
+                        margin: 2em 1em 1em 0;
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        margin-left: 1em;
+                        font-size: 1.3rem;
+                        color: variable.$Very_dark_blue;
+    
+                        &:hover {
+                            color: variable.$Soft_red;
+                        }
+                    }
+                }
+            }
+    
+            .sidebar.active {
+                display: none;
+            }
+        }
+ }
+ 

@@ -1,0 +1,43 @@
+@use "../variable";
+@mixin navbar {
+.nav_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    padding: 1em 0 1em 0;
+    .logo_container {
+        img {
+            width: auto;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        li {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        a {
+            text-decoration: none;
+            margin-left: 2em;
+            font-size: 1.3rem;
+            color: variable.$Very_dark_blue;
+
+            &:hover {
+                color: variable.$Soft_red;
+            }
+        }
+    }
+    // navbar media querry
+    @media screen and (max-width: 600px) {
+        ul {
+            li {
+                display: none;
+            }
+        }
+
+    }
+}
+}
